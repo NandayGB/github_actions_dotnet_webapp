@@ -1,0 +1,21 @@
+name: Fernanda Barbosa Workflow
+
+on:
+  push:
+    branches:
+      - main
+  schedule:
+    - cron: '0 * * * *'  # Executar a cada hora
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Run custom script
+      run: |
+        echo "Running custom script by Fernanda Barbosa"
+        echo "Current time: $(date)"
